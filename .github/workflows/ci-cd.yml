@@ -34,6 +34,9 @@ jobs:
       - name: Verify APK path
         run: ls -R app/build/outputs/apk/release
 
+      - name: List APK directory contents
+        run: ls -R app/build/outputs/apk
+
       - name: Upload APK as artifact
         uses: actions/upload-artifact@v4
         with:
