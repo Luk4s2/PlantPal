@@ -7,7 +7,7 @@ import androidx.compose.ui.test.onFirst
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import eu.plantpal.app.model.DefaultImage
 import eu.plantpal.app.model.PlantDetail
-import eu.plantpal.app.ui.PlantDetailScreen
+import eu.plantpal.app.ui.plantDetailScreen.PlantDetailScreen
 import eu.plantpal.app.ui.theme.PlantPalTheme
 import eu.plantpal.app.viewmodel.PlantDetailModel
 import kotlinx.coroutines.flow.MutableStateFlow

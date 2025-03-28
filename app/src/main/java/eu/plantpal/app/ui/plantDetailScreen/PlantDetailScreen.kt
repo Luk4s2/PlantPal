@@ -1,4 +1,4 @@
-package eu.plantpal.app.ui
+package eu.plantpal.app.ui.plantDetailScreen
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -36,10 +36,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberAsyncImagePainter
+import eu.plantpal.app.ui.FullscreenImageDialog
 import eu.plantpal.app.util.capitalizeWords
 import eu.plantpal.app.viewmodel.PlantDetailModel
 
@@ -85,10 +85,10 @@ fun PlantDetailScreen(
 		plant?.let {
 			Column(
 				modifier = Modifier
-                    .padding(padding)
-                    .padding(16.dp)
-                    .fillMaxSize()
-                    .verticalScroll(rememberScrollState()),
+					.padding(padding)
+					.padding(16.dp)
+					.fillMaxSize()
+					.verticalScroll(rememberScrollState()),
 				verticalArrangement = Arrangement.spacedBy(12.dp)
 			) {
 				it.defaultImage?.regularUrl?.let { img ->
@@ -97,8 +97,8 @@ fun PlantDetailScreen(
 							containerColor = MaterialTheme.colorScheme.primaryContainer
 						),
 						modifier = Modifier
-                            .fillMaxWidth()
-                            .clickable { isDialogOpen = true },
+							.fillMaxWidth()
+							.clickable { isDialogOpen = true },
 						shape = RoundedCornerShape(16.dp),
 						border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary)
 
@@ -107,9 +107,9 @@ fun PlantDetailScreen(
 							painter = rememberAsyncImagePainter(img),
 							contentDescription = it.commonName,
 							modifier = Modifier
-                                .fillMaxWidth()
-                                .aspectRatio(16f / 9f)
-                                .clip(RoundedCornerShape(16.dp))
+								.fillMaxWidth()
+								.aspectRatio(16f / 9f)
+								.clip(RoundedCornerShape(16.dp))
 						)
 					}
 				}
@@ -143,8 +143,8 @@ fun PlantDetailScreen(
 			}
 		} ?: Box(
 			modifier = Modifier
-                .fillMaxSize()
-                .padding(padding),
+				.fillMaxSize()
+				.padding(padding),
 			contentAlignment = Alignment.Center
 		) {
 			CircularProgressIndicator()
@@ -159,19 +159,4 @@ fun PlantDetailScreen(
 	}
 }
 
-@Composable
-private fun DetailItem(title: String, value: String?) {
-	value?.takeIf { it.isNotBlank() }?.let {
-		Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-			Text(
-				text = title,
-				style = MaterialTheme.typography.labelLarge,
-				fontWeight = FontWeight.SemiBold
-			)
-			Text(
-				text = it,
-				style = MaterialTheme.typography.bodyLarge
-			)
-		}
-	}
-}
+
