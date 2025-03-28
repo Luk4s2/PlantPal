@@ -10,9 +10,9 @@ development practices including Jetpack Compose, MVVM architecture, Retrofit net
 
 - Browse a list of plant species with images
 - Tap to view detailed info on each plant
-- Using LRU caches
+- Using LRU caches instead of local database
 - Live data from Perenual Plant API
-- Jetpack Compose UI + Hilt injec
+- Jetpack Compose UI + Hilt inject
 - ViewModel + Repository pattern
 - Navigation between screens
 - Unit test and static analysis with Detekt
