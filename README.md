@@ -10,8 +10,9 @@ development practices including Jetpack Compose, MVVM architecture, Retrofit net
 
 - Browse a list of plant species with images
 - Tap to view detailed info on each plant
+- Using LRU caches
 - Live data from Perenual Plant API
-- Jetpack Compose UI
+- Jetpack Compose UI + Hilt injec
 - ViewModel + Repository pattern
 - Navigation between screens
 - Unit test and static analysis with Detekt
@@ -22,6 +23,7 @@ development practices including Jetpack Compose, MVVM architecture, Retrofit net
 
 - **Kotlin Multiplatform (Android)**
 - **Jetpack Compose**
+- **Hilt**
 - **ViewModel / LiveData / StateFlow**
 - **Retrofit + Moshi**
 - **Perenual API**
@@ -48,15 +50,6 @@ cd plantpal
 
 ---
 
-## 🔑 API Key
-
-This project uses a free API key from Perenual. A sample key is pre-integrated:
-
-```
-API_KEY = sk-J1k467dfc6e0b511f9355
-```
-
----
 
 ## 🧪 Testing
 
@@ -68,13 +61,6 @@ To run unit tests:
 
 ---
 
-## 🧹 Static Code Analysis
-
-To run Detekt checks:
-
-```bash
-./gradlew detekt
-```
 
 ---
 
