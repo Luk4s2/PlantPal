@@ -15,7 +15,8 @@ development practices including Jetpack Compose, MVVM architecture, Retrofit net
 - Jetpack Compose UI + Hilt inject
 - ViewModel + Repository pattern
 - Navigation between screens
-- Unit test and static analysis with Detekt
+- Unit tests and static analysis with Detekt
+- CI/CD pipeline for automatic build, test, and lint checks
 
 ---
 
@@ -30,6 +31,22 @@ development practices including Jetpack Compose, MVVM architecture, Retrofit net
 - **Coil (Image loading)**
 - **JUnit (Testing)**
 - **Detekt (Static code analysis)**
+- **GitHub Actions (CI/CD)**
+
+---
+
+## 🔄 CI/CD
+
+PlantPal uses **GitHub Actions** for continuous integration and deployment. Every pull request and
+push to `main` triggers workflows that:
+
+- Run unit tests (`./gradlew test`)
+- Run Detekt for code quality checks (`./gradlew detekt`)
+- Build the Android app to verify build integrity
+
+This ensures code quality and app stability with every change.
+
+Workflow files are located in `.github/workflows/`.
 
 ---
 
@@ -47,20 +64,6 @@ cd plantpal
 3. Sync Gradle & Build the project
 
 4. Run the app on your Android emulator or device
-
----
-
-
-## 🧪 Testing
-
-To run unit tests:
-
-```bash
-./gradlew test
-```
-
----
-
 
 ---
 
